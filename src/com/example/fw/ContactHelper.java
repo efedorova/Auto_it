@@ -1,7 +1,6 @@
 package com.example.fw;
 
 import com.example.tests.ContactData;
-import com.example.tests.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -19,8 +18,8 @@ public class ContactHelper extends HelperBase {
     }
 
     public void fillContactForm(ContactData contact) {
-        type(By.name("first name"), contact.firstName);
-        type(By.name("last name"), contact.lastName);
+        type(By.name("firstname"), contact.firstname);
+        type(By.name("lastname"), contact.lastname);
         type(By.name("address"), contact.address);
         type(By.name("home"), contact.homePhoneNumber);
         type(By.name("mobile"), contact.mobilePhoneNumber);
@@ -61,7 +60,7 @@ public class ContactHelper extends HelperBase {
         for (WebElement checkbox : checkboxes) {
             ContactData contact = new ContactData();
             String title = checkbox.getAttribute("title");
-            contact.firstName = title.substring("Select (".length(), title.length() - ")".length());
+            contact.firstname = title.substring("Select (".length(), title.length() - "secondname)".length());
             contacts.add(contact);
         }
         return contacts;

@@ -1,8 +1,8 @@
 package com.example.tests;
 
 public class ContactData implements Comparable<ContactData> {
-    public String firstName;
-    public String lastName;
+    public String firstname;
+    public String lastname;
     public String address;
     public String homePhoneNumber;
     public String mobilePhoneNumber;
@@ -22,7 +22,7 @@ public class ContactData implements Comparable<ContactData> {
     @Override
     public String toString() {
         return "ContactData{" +
-                "firstName='" + firstName + '\'' +
+                "firstname='" + firstname + '\'' +
                 '}';
     }
 
@@ -33,17 +33,17 @@ public class ContactData implements Comparable<ContactData> {
 
         ContactData that = (ContactData) o;
 
-        return firstName.equals(that.firstName);
+        return firstname.equals(that.firstname);
 
     }
 
     @Override
     public int hashCode() {
-        return firstName.hashCode();
+        return firstname.hashCode();
     }
 
     @Override
     public int compareTo(ContactData other) {
-        return this.firstName.toLowerCase().compareTo(other.firstName.toLowerCase());
+        return this.firstname.toLowerCase().compareTo(other.firstname.toLowerCase());
     }
 }

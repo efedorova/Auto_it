@@ -8,7 +8,7 @@ public class ContactModificationTests extends TestBase {
         app.getNavigationHelper().openMainPage();
         app.getContactHelper().initContactModification(1);
         ContactData contact = new ContactData();
-        contact.firstName = "Absolutely NEW name!!!";
+        contact.firstname = "Absolutely NEW name!!!";
         app.getContactHelper().fillContactForm(contact);
         app.getContactHelper().submitContactModification();
         app.getContactHelper().returnToHomePage();
